@@ -1,0 +1,257 @@
+@import "variables";
+
+html, body {
+  width: 100%;
+  font-family: $helveticaLight;
+  font-size: 14px;
+  background: #fff;
+  color: $black;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $helveticaLight;
+}
+
+ul, ol, dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+input.error, textarea.error {
+  margin: 0 0 1rem 0;
+  border-color: #C20000;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  font-size: 14px;
+}
+
+small {
+  font-size: 70%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.fullsize {
+  width: 100%;
+}
+
+.nomargin {
+  margin: 0;
+}
+
+.orange {
+  color: $orange;
+}
+
+.bold {
+  font-family: $helveticaMed;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.note {
+  color: $lightGrey;
+  font-style: italic;
+}
+
+.button {
+  text-transform: uppercase;
+  font-family: $arialNarrow;
+  padding: 5px 15px;
+  margin: 0;
+
+  &.big {
+    font-size: 20px;
+  }
+
+  &.inactive {
+    background: $lightGrey;
+  }
+}
+
+.checkbox {
+  display: none;
+
+  & + label span {
+    display: inline-block;
+    zoom: 1;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    margin-right: 5px;
+  }
+
+  &.error + label span {
+    border-color: $red;
+  }
+
+  &:checked + label span {
+    position: relative;
+
+    &:after {
+      content: " ";
+      color: white;
+      background: url("/media/images/sprites/checkmark.png") no-repeat;
+      background-size: 100%;
+      width: 15px;
+      height: 18px;
+      display: block;
+      position: absolute;
+      top: -6px;
+      left: -1px;
+    }
+  }
+}
+
+.response {
+  font-weight: bold;
+
+  .error {
+    color: $red;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    background: #fff;
+  }
+}
+
+.block {
+  margin-bottom: 15px;
+
+  .block-title {
+    @include border-radius(5px 5px 0 0);
+    background: $orange;
+    color: #fff;
+    font-family: $helveticaLight;
+    padding: 5px 15px;
+    font-size: 18px;
+  }
+
+  .block-content {
+    border: 1px solid $lightGrey;
+    padding: 10px 15px;
+  }
+
+  &.big {
+    .block-title {
+      float: left;
+      margin-left: 15px;
+    }
+
+    .block-content {
+      clear: left;
+    }
+  }
+}
+
+img {
+  &.landscape {
+    width: 100%;
+    height: auto;
+  }
+
+  &.portrait {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  z-index: 999;
+}
+
+.pagination {
+  margin: 10px 0;
+
+  a {
+    color: $black;
+    margin: 0 3px;
+
+    &.current {
+      color: $orange;
+      font-family: $helveticaMed;
+    }
+  }
+}
+
+.bullet-pagination {
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 5px;
+
+  .pagination {
+    display: inline;
+    margin: 0 5px;
+
+    a {
+      font-size: 1px;
+      color: transparent;
+    }
+  }
+}
+
+.popover {
+  display: none;
+}
+
+.form {
+  margin: 0;
+
+  .individual-response {
+    display: table;
+    margin-top: 22px;
+
+    .notif-block {
+      float: left;
+
+      &, & + span {
+        display: table-cell;
+      }
+
+      & + span.error, & + small.error {
+        background: none;
+        color: $red;
+        padding: 0;
+        padding-left: 5px;
+        margin: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .file-browser {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+
+.link {
+  font-weight: bold;
+  text-decoration: underline;
+  font-style: italic;
+}

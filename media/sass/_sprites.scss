@@ -1,0 +1,133 @@
+@import "compass/utilities/sprites";
+
+$sprites: sprite-map("sprites/*.png");
+$sprites-retina: sprite-map("retina/*.png");
+$sprites-spacing: 5px;
+$sprites-retina-spacing: 5px;
+
+@mixin sprite-background($sprite) {
+  background-image: sprite-url($sprites);
+  background-position: sprite-position($sprites, $sprite);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  height: floor(image-height(sprite-file($sprites, $sprite)));
+  width: image-width(sprite-file($sprites, $sprite));
+
+  @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+    background-image: sprite-url($sprites-retina);
+    background-size: (image-width(sprite-path($sprites-retina)) / 2) (image-height(sprite-path($sprites-retina)) / 2);
+    background-position: round(nth(sprite-position($sprites-retina, $sprite), 1) / 2) round(nth(sprite-position($sprites-retina, $sprite), 2) / 2);
+    height: floor(image-height(sprite-file($sprites-retina, $sprite)) / 2);
+    width: image-width(sprite-file($sprites-retina, $sprite)) / 2;
+  }
+}
+
+.sprites {
+  display: inline-block;
+  //    background-image: url('/media/images/retina.png') !important;
+
+  &.search {
+    @include sprite-background(search);
+  }
+
+  &.bullet {
+    @include sprite-background(bullet);
+
+    &.active {
+      @include sprite-background(bullet-active);
+    }
+  }
+
+  &.facebook {
+    @include sprite-background(facebook);
+    &:hover, &.hover {
+      @include sprite-background(facebook-hover);
+    }
+  }
+
+  &.twitter {
+    @include sprite-background(twitter);
+    &:hover, &.hover {
+      @include sprite-background(twitter-hover);
+    }
+  }
+
+  &.gplus {
+    @include sprite-background(gplus);
+    &:hover, &.hover {
+      @include sprite-background(gplus-hover);
+    }
+  }
+
+  &.rss {
+    @include sprite-background(rss);
+    &:hover, &.hover {
+      @include sprite-background(rss-hover);
+    }
+  }
+
+  &.minus {
+    @include sprite-background(minus);
+  }
+
+  &.plus {
+    @include sprite-background(plus);
+  }
+
+  &.arrow-right {
+    @include sprite-background(arrow-right);
+
+    &.white {
+      @include sprite-background(arrow-right-white);
+    }
+  }
+
+  &.arrow-left {
+    @include sprite-background(arrow-left);
+
+//    &.white {
+//      @include sprite-background(arrow-right-white);
+//    }
+  }
+
+  &.arrow-down {
+    @include sprite-background(arrow-down);
+
+    &.white {
+      @include sprite-background(arrow-down-white);
+    }
+  }
+
+  &.cross {
+    @include sprite-background(cross);
+  }
+
+  &.wrong {
+    @include sprite-background(wrong);
+  }
+
+  &.check {
+    @include sprite-background(checkmark);
+  }
+
+  &.share-facebook {
+    @include sprite-background(share-facebook);
+  }
+
+  &.share-twitter {
+    @include sprite-background(share-twitter);
+  }
+
+  &.share-gplus {
+    @include sprite-background(share-gplus);
+  }
+
+  &.share-instagram {
+    @include sprite-background(share-instagram);
+  }
+
+  &.thumb {
+    @include sprite-background(thumb);
+  }
+}

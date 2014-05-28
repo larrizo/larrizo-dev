@@ -1,0 +1,54 @@
+#user-page {
+  .thumbnail-container {
+    position: relative;
+
+    .dummy {
+      padding-top: 100%;
+    }
+  }
+
+  .static-username {
+    font-size: 24px;
+  }
+
+  .payment-method-detail {
+    margin: 10px 0 10px 23px;
+    display: none;
+  }
+
+  .payment-method:checked ~ .payment-method-detail {
+    display: block;
+  }
+
+  #activity {
+    li {
+      padding: 0 15px;
+
+      &.active {
+        background: $orange;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  #change-password {
+    @extend #register-page;
+  }
+
+  #user-business-form {
+    h1#business-name {
+      font-size: 24px;
+    }
+  }
+}

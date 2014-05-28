@@ -1,0 +1,20 @@
+@import "../variables";
+@import "../sprites";
+
+#main-menu {
+  height : 30px;
+  margin-bottom: 20px;
+
+  a {
+    line-height : 30px;
+    font-size   : 12px;
+  }
+
+  .top-bar-section .has-dropdown > a:after {
+    top: 15.5px;
+  }
+}
+
+#login-page {
+  padding-top : 100px;
+}

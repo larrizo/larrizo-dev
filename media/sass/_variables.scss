@@ -1,0 +1,19 @@
+@import "compass/css3/font-face";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+
+@include font-face("HelveticaLight", font-files("/media/fonts/helveticaneueltstd-lt-webfont.ttf", "/media/fonts/helveticaneueltstd-lt-webfont.woff"), '/media/fonts/helveticaneueltstd-lt-webfont.eot');
+@include font-face("HelveticaMed", font-files("/media/fonts/helveticaneueltstd-md-webfont.ttf", "/media/fonts/helveticaneueltstd-md-webfont.woff"), '/media/fonts/helveticaneueltstd-md-webfont.eot');
+@include font-face("HelveticaBold", font-files("/media/fonts/helveticaneueltstd-bd-webfont.ttf", "/media/fonts/helveticaneueltstd-bd-webfont.woff"), '/media/fonts/helveticaneueltstd-bd-webfont.eot');
+
+$helveticaLight: "HelveticaLight", Helvetica, Arial, sans-serif;
+$helveticaMed: "HelveticaMed", Helvetica, Arial, sans-serif;
+$helveticaBold: "HelveticaBold", Helvetica, Arial, sans-serif;
+$arialNarrow: "Arial Narrow", Helvetica, Arial, sans-serif;
+
+$orange: #ffa500;
+$grey: #666;
+$lightGrey: #b7b7b7;
+$black: #333;
+$red: #C20000;

@@ -1,0 +1,25 @@
+#home-page {
+  #carousel {
+    overflow: hidden;
+
+    li {
+      float: left;
+    }
+  }
+
+  #promotions {
+    margin-bottom: 15px;
+  }
+
+  #banner-list {
+    margin-top: 27px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  #main-menu {
+    margin-bottom: 0;
+  }
+}

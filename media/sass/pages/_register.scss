@@ -1,0 +1,42 @@
+#register-page {
+  #password-meter {
+    margin-top: 5px;
+    height: 20px;
+    border: 1px solid $lightGrey;
+
+    span {
+      @include single-transition(width, 200ms, ease-in-out);
+      width: 0;
+      display: block;
+      height: 100%;
+      background: rgba(255,255,255,1);
+      background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,166,0,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(255,166,0,1)));
+      background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,166,0,1) 100%);
+      background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,166,0,1) 100%);
+      background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,166,0,1) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,166,0,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffa500', GradientType=1 );
+    }
+
+    &.too-weak-pass span {
+      width: 20%;
+    }
+
+    &.weak-pass span {
+      width: 40%;
+    }
+
+    &.good-pass span {
+      width: 60%;
+    }
+
+    &.strong-pass span {
+      width: 80%;
+    }
+
+    &.very-strong-pass span {
+      width: 100%;
+    }
+  }
+}

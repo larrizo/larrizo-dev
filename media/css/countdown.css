@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Helvetica Neue LT Std 45 Light';
+    src:         url('../fonts/helveticaneueltstd-lt-webfont.eot');
+    src:         url('../fonts/helveticaneueltstd-lt-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneueltstd-lt-webfont.woff') format('woff'), url('../fonts/helveticaneueltstd-lt-webfont.ttf') format('truetype'), url('../fonts/helveticaneueltstd-lt-webfont.svg#HelveticaNeueLTStd45Light') format('svg');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Std 75 Bold';
+    src:         url('helveticaneueltstd-bd-webfont.eot');
+    src:         url('helveticaneueltstd-bd-webfont.eot?#iefix') format('embedded-opentype'), url('helveticaneueltstd-bd-webfont.woff') format('woff'), url('helveticaneueltstd-bd-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Std 65 Medium';
+    src:         url('helveticaneueltstd-md-webfont.eot');
+    src:         url('helveticaneueltstd-md-webfont.eot?#iefix') format('embedded-opentype'), url('helveticaneueltstd-md-webfont.woff') format('woff'), url('helveticaneueltstd-md-webfont.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue LT Std 45 Light", Arial, sans-serif;
+    font-size: 14px;
+    background: #000;
+}
+
+.orange { color: #ffa500; }
+
+.bold { font-family: "Helvetica Neue LT Std 75 Bold", Arial, sans-serif; }
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+h2 { font-size: 20px; }
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.btn {
+    background: #ffa500;
+    color: #fff;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#container {
+    color: #e7e7e7;
+    text-align: center;
+    padding-top: 5%;
+}
+
+#countdown { margin-top: 80px; }
+
+#countdown .countdown .countdown { max-width : none; padding : 70px 50px }
+#countdown .countdown .circle { display : inline-block; position : relative; margin : -10px }
+#countdown .countdown canvas { height : 134px; width : 134px }
+#countdown .countdown .circle__values { height : 70px; margin-top : -35px; position : absolute; top : 50%; width : 100% }
+#countdown .countdown .ce-digit, #countdown .countdown .ce-label { display : block; line-height : 1 }
+#countdown .countdown .ce-digit { display : block; font-size : 30px }
+#countdown .countdown .ce-label { color : #929292; display : block; font-size : 12px; margin-top : 15px; text-transform : uppercase }
+@media all and (min-width: 400px) {
+    #countdown .countdown .circle { margin : -20px }
+    #countdown .countdown canvas { width : 164px; height : 164px }
+    #countdown .countdown .ce-digit { font-size : 35px }
+    #countdown .countdown .ce-label { font-size : 15px }
+}
+@media all and (min-width: 900px) {
+    #countdown .countdown .circle { margin : -25px }
+    #countdown .countdown canvas { width : 204px; height : 204px }
+    #countdown .countdown .ce-digit { font-size : 40px }
+    #countdown .countdown .ce-label { font-size : 15px }
+}
+
+#social-media { margin-top: 20px; }
+
+#social-media ul { margin-top: 20px; }
+
+#social-media li { display: inline-block; margin: 0 10px; }
+
+#social-media a {
+    background: url('/media/images/social-media.png') no-repeat;
+    width: 53px;
+    height: 59px;
+    display: block;
+}
+
+#social-media a.facebook { background-position: -1px 0; }
+
+#social-media a.twitter { background-position: -65px 0; }
+
+#social-media a.gplus { background-position: -130px 0; }
+
+#newsletter-form {
+    width: 25%;
+    margin: 10px auto 0;
+}
